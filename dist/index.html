@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>BlippAR Challenge</title>
+		<style>
+			body {
+				margin: 0;
+				font-family: Arial, Helvetica, sans-serif;
+				}
+			.navbar {
+		    overflow: hidden;
+		    background-color: #333;
+		    font-family: Arial, Helvetica, sans-serif;
+
+				}
+				.navbar a {
+		    float: left;
+		    font-size: 16px;
+		    color: white;
+		    text-align: center;
+		    padding: 14px 16px;
+		    text-decoration: none;
+			}
+			.dropdown {
+			    float: left;
+			    overflow: hidden;
+			}
+			.dropdown .dropbtn {
+				  cursor: pointer;
+			    font-size: 16px;
+			    border: none;
+			    outline: none;
+			    color: white;
+			    padding: 14px 16px;
+			    background-color: inherit;
+			    font-family: inherit;
+			    margin: 0;
+			}
+			.navbar a:hover, .dropdown:hover .dropbtn {
+			    background-color: white;
+					color: black;
+			}
+
+			.dropdown-content {
+			    display: none;
+			    position: absolute;
+			    background-color: #f9f9f9;
+			    min-width: 160px;
+			    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			    z-index: 1;
+			}
+			 .btn-group{
+					display: none;
+					position: absolute;
+			    background-color: #f9f9f9;
+			    min-width: 160px;
+			    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+			    z-index: 1;
+				}
+
+			.dropdown-content a {
+			    float: none;
+			    color: black;
+			    padding: 12px 16px;
+			    text-decoration: none;
+			    display: block;
+			    text-align: left;
+			}
+
+			.dropdown-content a:hover {
+				background-color: black;
+				color: white;
+			}
+
+			.dropdown:hover .dropdown-content {
+			    display: block;
+			}
+			.button {background-color: #ff4000;cursor: pointer} /* Red */
+			.button2 {background-color: #00FF00;}  /*Green*/
+			.button3 {background-color: #0000FF;} /*blue*/
+			.button4 {background-color: #ffff66;} /*Yellow*/
+			.button5 {background-color: #ff00ff;} /*Pink*/
+			.button6 {background-color: #ff9933;} /*Orange*/
+			.button7 {background-color: #6600cc;} /*Purple*/
+
+			.buttonMin {background-color: white;color: white;}
+			.buttonMax {background-color: white;}
+
+	</style>
+	</head>
+	<body>
+		<div class="navbar">
+	  <a button type="button" onclick="startAnimation()">Start</a>
+		<a button type="button" onclick="pauseAnimation()">Pause</a>
+	  <div class="dropdown">
+	    <button class="dropbtn">Color</button>
+	    <div class="dropdown-content">
+	      <a button type="button" button class="button" onclick="changeColor(0xff4000)">Red</a>
+	      <a button type="button" button class="button button2" onclick="changeColor(0x00FF00)">Green</a>
+	      <a button type="button" button class="button button3" onclick="changeColor(0x0000FF)">Blue</a>
+			  <a button type="button" button class="button button4" onclick="changeColor(0xffff66)">Yellow</a>
+			  <a button type="button" button class="button button5" onclick="changeColor(0xff00ff)">Pink</a>
+				<a button type="button" button class="button button6" onclick="changeColor(0xff9933)">Orange</a>
+	      <a button type="button" button class="button button7" onclick="changeColor(0x6600cc)">Purple</a>
+	    </div>
+	  </div>
+		<div class="dropdown">
+	    <button class="dropbtn">Size</button>
+			 <div class="dropdown-content">
+					<a button type="button" button class="button buttonMax" onclick="changeSize(size, true)">+</a>
+			  	<a button type="button" button class="button buttonMin" onclick="changeSize(size, false)">-</a>
+	  </div>
+	</div>
+</div>
+    <div id="container"></div>
+		<script src="./bundle.js"></script>
+  </body>
+  </html>
