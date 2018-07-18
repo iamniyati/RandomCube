@@ -75,40 +75,41 @@
 			.dropdown:hover .dropdown-content {
 			    display: block;
 			}
-			.button {background-color: #ff4000;cursor: pointer} /* Red */
-			.button2 {background-color: #00FF00;}  /*Green*/
-			.button3 {background-color: #0000FF;} /*blue*/
-			.button4 {background-color: #ffff66;} /*Yellow*/
-			.button5 {background-color: #ff00ff;} /*Pink*/
-			.button6 {background-color: #ff9933;} /*Orange*/
-			.button7 {background-color: #6600cc;} /*Purple*/
+			.button  {cursor: pointer;}
+			.buttonRed {background-color: #ff4000;} /* Red */
+			.buttonGreen {background-color: #00FF00;}  /*Green*/
+			.buttonBlue {background-color: #0000FF;} /*blue*/
+			.buttonYellow {background-color: #ffff66;} /*Yellow*/
+			.buttonPink {background-color: #ff00ff;} /*Pink*/
+			.buttonOrange {background-color: #ff9933;} /*Orange*/
+			.buttonPurple {background-color: #6600cc;} /*Purple*/
 
 			.buttonMin {background-color: white;color: white;}
-			.buttonMax {background-color: white;}
+			.buttonMax {background-color: white; }
 
 	</style>
 	</head>
 	<body>
 		<div class="navbar">
-	  <a button type="button" onclick="startAnimation()">Start</a>
-		<a button type="button" onclick="pauseAnimation()">Pause</a>
+	  <a button type="button"  id="start" >Start</a>
+		<a button type="button"  id="pause" >Pause</a>
 	  <div class="dropdown">
 	    <button class="dropbtn">Color</button>
 	    <div class="dropdown-content">
-	      <a button type="button" button class="button" onclick="changeColor(0xff4000)">Red</a>
-	      <a button type="button" button class="button button2" onclick="changeColor(0x00FF00)">Green</a>
-	      <a button type="button" button class="button button3" onclick="changeColor(0x0000FF)">Blue</a>
-			  <a button type="button" button class="button button4" onclick="changeColor(0xffff66)">Yellow</a>
-			  <a button type="button" button class="button button5" onclick="changeColor(0xff00ff)">Pink</a>
-				<a button type="button" button class="button button6" onclick="changeColor(0xff9933)">Orange</a>
-	      <a button type="button" button class="button button7" onclick="changeColor(0x6600cc)">Purple</a>
+	      <a button type="button" button class="button buttonRed" id="red" >Red</a>
+	      <a button type="button" button class="button buttonGreen" id="green" >Green</a>
+	      <a button type="button" button class="button buttonBlue" id="blue" >Blue</a>
+			  <a button type="button" button class="button buttonYellow" id="yellow" >Yellow</a>
+			  <a button type="button" button class="button buttonPink" id="pink" >Pink</a>
+				<a button type="button" button class="button buttonOrange" id="orange" >Orange</a>
+	      <a button type="button" button class="button buttonPurple" id="purple" >Purple</a>
 	    </div>
 	  </div>
 		<div class="dropdown">
 	    <button class="dropbtn">Size</button>
 			 <div class="dropdown-content">
-					<a button type="button" button class="button buttonMax" onclick="changeSize(size, true)">+</a>
-			  	<a button type="button" button class="button buttonMin" onclick="changeSize(size, false)">-</a>
+					<a button type="button" button class="button buttonMax" id="max"  style="font-weight:bold; text-align: center;">+</a>
+			  	<a button type="button" button class="button buttonMin" id="min" style="font-weight:bold; text-align: center;">-</a>
 	  </div>
 	</div>
 </div>
